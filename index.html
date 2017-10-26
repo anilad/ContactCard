@@ -28,9 +28,9 @@
 
             }); // button.click
             $(document).on("click","a", function () {
-                $("#name").hide();
-                $('a').hide();
-                $("p").show();
+                $(this).siblings('#name').hide();
+                $(this).hide();
+                $(this).siblings('p').show();
             }); // box.on
         }); // document.ready
     </script>
