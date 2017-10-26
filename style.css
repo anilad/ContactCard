@@ -1,0 +1,54 @@
+.container{
+    margin: 10px auto;
+    width: 60%;
+    text-align: center;
+    border: 2px solid grey;
+}
+
+.container>h1{
+    font-size: 3em;
+}
+
+form{
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+input{
+    margin: 5px;
+    width: 200px;
+}
+
+textarea{
+    vertical-align: top;
+    width: 202px;
+    height: 200px;
+    margin: 5px;
+    padding: 1px;
+    
+}
+
+.box{
+    display: inline-block;
+    vertical-align: right;
+    background: grey;
+    width: 500px;
+    /* height: 400px; */
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.card{
+    margin: 5px;
+    padding: 15px;
+    background: lightcyan;
+}
+
+.card>h1{
+    margin: 5px;
+}
+
+p{
+    display: none;
+}

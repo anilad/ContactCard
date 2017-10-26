@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $("button").click(function () {
+                var temp=$("#description").val();
+                $('.box').append([
+                    "<div class='card'>",
+                    '<h1 id="name">' + $("#fName").val() +' '+ $("#lName").val() + '</h1>',
+                    '<a href="#">Click for description</a>',
+                    '<p>'+ $("#description").val() + '</p>',
+                    "</div>"
+                ].join(''));
+
+                $('input').val(''); //clears input box after button.click
+                $('#description').val(''); //clears textbox after button.click
+                return false;
+
+
+            }); // button.click
+            $(document).on("click","a", function () {
+                $("#name").hide();
+                $('a').hide();
+                $("p").show();
+            }); // box.on
+        }); // document.ready
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The CodingDojo Contact Page</h1>
+        <form action="process.php" method="post">
+            First Name: <input type="text" id="fName" placeholder="First Name">
+            <br> Last Name: <input type="text" id="lName" placeholder="Last Name">
+            <br> Description: <textarea id="description" placeholder="Enter Description"></textarea>
+            <br>
+            <button>Add User</button>
+        </form>
+
+        <div class="box">
+        </div>
+
+    </div>
+</body>
+
+</html>
